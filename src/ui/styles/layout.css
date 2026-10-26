@@ -124,7 +124,7 @@
 .grid-kpi {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
-.menu-toggle {
+.btn.menu-toggle {
   display: none;
 }
 .drop-overlay {
@@ -165,7 +165,7 @@
     transform: none;
     box-shadow: var(--shadow);
   }
-  .menu-toggle {
+  .btn.menu-toggle {
     display: inline-flex;
   }
   .grid-2,
