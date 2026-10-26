@@ -10,3 +10,6 @@
 - After each phase: run lint + tests, update the phase checklist in PLAN.md §15.
 - Fully local: no server, no network calls at runtime. dist/index.html must open from file://.
 - Toolchain notes: TypeScript pinned to ~5.9 (typescript-eslint does not support TS 7 yet). SheetJS comes from the cdn.sheetjs.com tarball.
+- Excel reading: src/app/io/fastXlsx.ts (fast path, verified cell-for-cell against SheetJS in tests) with SheetJS fallback for .xls/.csv/unusual files.
+- Accessibility: `npm run build && npm run audit:a11y` (Lighthouse, all pages with data) must stay ≥ 90; axe runs in tests/e2e/a11y.spec.ts.
+- Scripted edits: always assert the old text exists before replacing (silent misses happened).

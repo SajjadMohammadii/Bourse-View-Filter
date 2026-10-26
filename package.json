@@ -11,10 +11,11 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
+    "test:coverage": "BVF_COVERAGE=1 vitest run --coverage",
     "test:e2e": "npm run build && playwright test",
     "lint": "eslint . && tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "audit:a11y": "node scripts/lighthouse-a11y.mjs"
   },
   "dependencies": {
     "echarts": "^6.1.0",
@@ -24,6 +25,7 @@
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.5",
@@ -32,6 +34,7 @@
     "eslint": "^10.13.0",
     "eslint-plugin-boundaries": "^7.3.0",
     "fake-indexeddb": "^6.2.6",
+    "lighthouse": "^12.8.2",
     "prettier": "^3.9.10",
     "typescript": "~5.9",
     "typescript-eslint": "^8.72.1",

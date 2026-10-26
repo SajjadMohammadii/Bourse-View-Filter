@@ -1,0 +1,74 @@
+/* Tabulator re-skinned with design tokens. */
+.tabulator {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.tabulator .tabulator-header {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  border-block-end: 1px solid var(--border);
+  font-weight: 500;
+}
+.tabulator .tabulator-header .tabulator-col {
+  background: var(--surface-2);
+  border-inline-end: 1px solid var(--border-subtle);
+}
+.tabulator .tabulator-header .tabulator-col:hover,
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable.tabulator-col-sorter-element:hover {
+  background: var(--surface-3);
+}
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+  border-bottom-color: var(--text-faint);
+}
+.tabulator .tabulator-tableholder {
+  background: var(--surface-1);
+}
+.tabulator .tabulator-tableholder .tabulator-table {
+  background: var(--surface-1);
+  color: var(--text);
+}
+.tabulator-row {
+  background: var(--surface-1);
+  border-block-end: 1px solid var(--border-subtle);
+  min-height: 34px;
+}
+.tabulator-row.tabulator-row-even {
+  background: #0e1a36;
+}
+.tabulator-row.tabulator-selectable:hover,
+.tabulator-row:hover {
+  background: var(--surface-3);
+  cursor: pointer;
+}
+.tabulator-row .tabulator-cell {
+  border-inline-end: 1px solid var(--border-subtle);
+  padding: 6px 8px;
+}
+.tabulator-row .tabulator-cell.tabulator-frozen,
+.tabulator .tabulator-header .tabulator-col.tabulator-frozen {
+  background: inherit;
+}
+.tabulator-row .tabulator-cell.tabulator-frozen.tabulator-frozen-right,
+.tabulator-row .tabulator-cell.tabulator-frozen.tabulator-frozen-left {
+  border-color: var(--border);
+}
+.tabulator .tabulator-placeholder .tabulator-placeholder-contents {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+.tabulator .tabulator-footer {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+/* Tabulator RTL: frozen columns are positioned with `left`; in RTL they must stick to the right edge. */
+.tabulator-rtl .tabulator-cell.tabulator-frozen,
+.tabulator-rtl .tabulator-col.tabulator-frozen {
+  left: auto !important;
+  right: 0;
+  background: var(--surface-2);
+  border-inline-start: 1px solid var(--border);
+}

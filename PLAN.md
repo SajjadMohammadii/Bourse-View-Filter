@@ -859,43 +859,43 @@ call       := identifier '(' (expr (',' expr)*)? ')'
 - ✅ پذیرش: `npm run build` یک `dist/index.html` تولید می‌کند که آفلاین با دابل‌کلیک باز می‌شود.
 
 **فاز ۱ — لایه داده**
-- [ ] Worker + SheetJS، normalizeHeaders، parseValue، buildDataset ستون‌محور، snapshotDate، schemaValidator.
-- [ ] Data Dictionary کامل (`columns.ts`) برای همه ۴۴۴ ستون معنادار.
-- [ ] صفحه «سلامت داده» و یک جدول خام ساده.
+- [x] Worker + SheetJS، normalizeHeaders، parseValue، buildDataset ستون‌محور، snapshotDate، schemaValidator.
+- [x] Data Dictionary کامل (`columns.ts`) برای همه ۴۴۴ ستون معنادار.
+- [x] صفحه «سلامت داده» و یک جدول خام ساده.
 - ✅ پذیرش: فایل نمونه → ۹۵۷ نماد، ستون خالی اول حذف، `-` به null، نام‌های دارای `\n` نرمال؛ تست‌های مقاومت داده سبز.
 
 **فاز ۲ — متریک‌های مشتق**
-- [ ] registry با حل وابستگی، helpers (safeDiv، realGrowth، NEGATIVE_BASE)، همه متریک‌های بخش ۵.۲ + تست.
+- [x] registry با حل وابستگی، helpers (safeDiv، realGrowth، NEGATIVE_BASE)، همه متریک‌های بخش ۵.۲ + تست.
 - ✅ پذیرش: برای «ذوب»: `D_Debt ≈ 1.464e14`، `D_DebtToRev ≈ 0.213`، `LiabilityToAsset` بازسازی‌شده ≈ ۰٫۶۵۴۵ (تست واحد).
 
 **فاز ۳ — موتور امتیاز + تکنیکال + ریسک بازار**
-- [ ] normalizers، peerGroups، factorEngine، profileEngine، grades، flags.
-- [ ] پروفایل تکنیکال (۷ فاکتور) و marketRiskEngine (۳ روش وزن‌دهی، به تفکیک Sector).
+- [x] normalizers، peerGroups، factorEngine، profileEngine، grades، flags.
+- [x] پروفایل تکنیکال (۷ فاکتور) و marketRiskEngine (۳ روش وزن‌دهی، به تفکیک Sector).
 - ✅ پذیرش: assertion «۴ ≤ تعداد فاکتور ≤ ۸»؛ داده ناقص باعث NaN در خروجی نمی‌شود؛ golden test تکنیکال.
 
 **فاز ۴ — سه پروفایل بنیادی**
-- [ ] بلندمدت (۸)، فصلی (۷)، ماهانه (۶)، industryOverrides، Piotroski-lite، شاخص‌های تحول، composite.
+- [x] بلندمدت (۸)، فصلی (۷)، ماهانه (۶)، industryOverrides، Piotroski-lite، شاخص‌های تحول، composite.
 - ✅ پذیرش: نمادهای بدون `Rev_1M` در ماهانه «گزارش ندارد»؛ بانک‌ها بدون متریک‌های غیرفعال امتیاز می‌گیرند؛ golden tests.
 
 **فاز ۵ — موتور فیلتر**
-- [ ] lexer (ارقام فارسی، `%`، `همت`)، Pratt parser، analyzer، evaluator برداری، کتابخانه توابع، پیام خطای فارسی + پیشنهاد نام.
+- [x] lexer (ارقام فارسی، `%`، `همت`)، Pratt parser، analyzer، evaluator برداری، کتابخانه توابع، پیام خطای فارسی + پیشنهاد نام.
 - ✅ پذیرش: ≥ ۶۰ تست پارسر/ارزیاب سبز؛ عبارت `NI_MRQ / NI_FY > 35% AND Exchange IN ("TSE","IFB") AND score.technical >= 60` درست ارزیابی می‌شود؛ ارزیابی روی ۱۰۰۰ نماد < ۲۰ms.
 
 **فاز ۶ — صفحات اصلی UI**
-- [ ] کامپوننت‌های پایه (KPI، Badge، FactorBar، DataTable روی Tabulator، Chart wrapper روی ECharts).
-- [ ] Overview، ۴ صفحه پروفایل (ProfilePage مشترک)، ریسک بازار، Drawer جزئیات نماد.
+- [x] کامپوننت‌های پایه (KPI، Badge، FactorBar، DataTable روی Tabulator، Chart wrapper روی ECharts).
+- [x] Overview، ۴ صفحه پروفایل (ProfilePage مشترک)، ریسک بازار، Drawer جزئیات نماد.
 - ✅ پذیرش: همه نمودارهای بخش ۱۲.۳ رندر و با تغییر فیلتر سراسری به‌روز می‌شوند.
 
 **فاز ۷ — استودیو فیلتر و پارامترهای سفارشی**
-- [ ] سازنده بصری ↔ متن، فیلتر سراسری/صفحه، Chips سریع، پریست‌ها (ذخیره/Export/Import)، پارامتر سفارشی با گراف وابستگی، افزودن پارامتر سفارشی به فاکتور.
+- [x] سازنده بصری ↔ متن، فیلتر سراسری/صفحه، Chips سریع، پریست‌ها (ذخیره/Export/Import)، پارامتر سفارشی با گراف وابستگی، افزودن پارامتر سفارشی به فاکتور.
 - ✅ پذیرش: کاربر `C_QtrShare = NI_MRQ / NI_FY` را تعریف، در جدول ستونش را می‌بیند، روی آن فیلتر می‌کند و به فاکتور Q1 اضافه‌اش می‌کند؛ پس از رفرش صفحه باقی است.
 
 **فاز ۸ — تاریخچه**
-- [ ] snapshotRepo، Δ امتیاز، تازه‌واردها، سری زمانی ریسک بازار، Sparkline.
+- [x] snapshotRepo، Δ امتیاز، تازه‌واردها، سری زمانی ریسک بازار، Sparkline.
 - ✅ پذیرش: با دو فایل تاریخ متفاوت (fixture مصنوعی دوم) ستون Δ و فهرست تازه‌واردها درست است.
 
 **فاز ۹ — تنظیمات، Export، پرداخت نهایی**
-- [ ] صفحه تنظیمات (فرض‌ها، وزن‌ها، ویرایشگر پروفایل)، Export جدول به xlsx/csv، دسترس‌پذیری، E2E کامل، README کاربری فارسی.
+- [x] صفحه تنظیمات (فرض‌ها، وزن‌ها، ویرایشگر پروفایل)، Export جدول به xlsx/csv، دسترس‌پذیری، E2E کامل، README کاربری فارسی.
 - ✅ پذیرش: E2E سبز؛ Lighthouse Accessibility ≥ ۹۰؛ بارگذاری کامل فایل نمونه < ۲ ثانیه روی لپ‌تاپ معمولی.
 
 ---

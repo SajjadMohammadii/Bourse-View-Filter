@@ -181,3 +181,10 @@
     display: none;
   }
 }
+/* Inner page column: stretches to the page width (no auto margins inside flex). */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}

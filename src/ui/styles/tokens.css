@@ -20,7 +20,8 @@
   /* text */
   --text: #e6eef8;
   --text-muted: #93a6c4;
-  --text-faint: #5f7397;
+  /* PLAN §12.1 listed #5F7397 (3.7:1 on surfaces); lightened to meet its own ≥ 4.5:1 text rule. */
+  --text-faint: #7b8eb0;
 
   /* status */
   --positive: #2dd4bf;
