@@ -1,0 +1,19 @@
+/* Vazirmatn bundled locally (inlined into the single-file build). */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}

@@ -1,0 +1,50 @@
+/* Design tokens — the only place colors are defined (PLAN.md §12.1). */
+:root {
+  /* surfaces (navy) */
+  --bg: #070e1d;
+  --surface-1: #0c1730;
+  --surface-2: #112042;
+  --surface-3: #182b55;
+  --border: #22396b;
+  --border-subtle: #172a50;
+
+  /* brand */
+  --turquoise-400: #2dd4bf;
+  --turquoise-500: #14b8a6;
+  --turquoise-600: #0d9488;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-700: #1d4ed8;
+  --navy-600: #1e3a8a;
+
+  /* text */
+  --text: #e6eef8;
+  --text-muted: #93a6c4;
+  --text-faint: #5f7397;
+
+  /* status */
+  --positive: #2dd4bf;
+  --negative: #f06a7a;
+  --warning: #f2b85b;
+  --neutral: #7c8db0;
+
+  /* score scale (0 → 100) */
+  --score-e: #f06a7a;
+  --score-d: #c77d9a;
+  --score-c: #7c8db0;
+  --score-b: #3b82f6;
+  --score-a: #2dd4bf;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --gap: 16px;
+  --gap-sm: 8px;
+  --font: 'Vazirmatn', system-ui, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', 'DejaVu Sans Mono', monospace;
+
+  --sidebar-w: 232px;
+  --topbar-h: 60px;
+  --drawer-w: min(720px, 96vw);
+  --shadow: 0 8px 32px rgb(0 0 0 / 0.45);
+  --focus: 0 0 0 2px var(--bg), 0 0 0 4px var(--turquoise-400);
+}

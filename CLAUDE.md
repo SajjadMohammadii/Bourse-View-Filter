@@ -1,0 +1,12 @@
+# Bourse View Filters
+- Source of truth: PLAN.md. Read relevant section before each task.
+- Commands: npm run dev | npm run build (single-file dist/index.html) | npm test | npm run test:e2e | npm run lint
+- Layering: ui → app → core ← config. core has NO DOM/storage access. Enforced by ESLint.
+- Add a metric: config/derivedMetrics.ts + unit test. Add a factor: config/profiles/*.ts. Never edit engines for new content.
+- Missing values: '-', '----', '' → null. Never crash on missing/new columns.
+- UI text only in src/i18n/fa.ts. RTL. Theme tokens only from ui/styles/tokens.css.
+- No eval/new Function. Filter language is parsed by core/filters.
+- Sample data: data/samples/screener-plus-1405-08-04.xlsx (golden tests).
+- After each phase: run lint + tests, update the phase checklist in PLAN.md §15.
+- Fully local: no server, no network calls at runtime. dist/index.html must open from file://.
+- Toolchain notes: TypeScript pinned to ~5.9 (typescript-eslint does not support TS 7 yet). SheetJS comes from the cdn.sheetjs.com tarball.

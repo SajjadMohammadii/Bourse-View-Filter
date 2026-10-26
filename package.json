@@ -1,0 +1,41 @@
+{
+  "name": "bourse-view-filters",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Client-only dashboard for scoring and filtering Tehran Stock Exchange screener snapshots",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "npm run build && playwright test",
+    "lint": "eslint . && tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "echarts": "^6.1.0",
+    "idb": "^8.0.4",
+    "tabulator-tables": "^6.7.1",
+    "vazirmatn": "^33.0.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "@types/tabulator-tables": "^6.3.6",
+    "@vitest/coverage-v8": "^5.0.5",
+    "eslint": "^10.13.0",
+    "eslint-plugin-boundaries": "^7.3.0",
+    "fake-indexeddb": "^6.2.6",
+    "prettier": "^3.9.10",
+    "typescript": "~5.9",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.0.5"
+  }
+}

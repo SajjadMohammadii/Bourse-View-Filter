@@ -1,0 +1,6 @@
+dist
+coverage
+node_modules
+PLAN.md
+data
+package-lock.json
